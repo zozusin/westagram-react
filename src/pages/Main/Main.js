@@ -1,41 +1,47 @@
 import React from "react";
-import "./Main.css";
+import "./Main.scss";
 
 function Main() {
   return (
     <>
       <nav>
-        <div>
-          <img src="images/인스타로고.png" alt="인스타로고" />
-          <span id="line"></span>
-          <i id="subject">Westagram</i>
+        <div id="logoBox">
+          <img
+            className="logoImage"
+            src="images/인스타로고.png"
+            alt="인스타로고"
+          />
+          <span id="subject">Westagram</span>
         </div>
 
         <div id="searchBox">
-          <input type="text" placeholder="검색" />
+          <input className="searchInput" type="text" placeholder="검색" />
           <i
             className="fa-solid fa-magnifying-glass"
             style={{ color: "#737578" }}
           ></i>
         </div>
 
-        <div>
+        <div id="imageBox">
           <img
+            className="logoImage"
             src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
             alt="탐색"
           />
           <img
+            className="logoImage"
             src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
             alt="하트"
           />
           <img
+            className="logoImage"
             src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
             alt="마이페이지"
           />
         </div>
       </nav>
-      ;
-      <main>
+
+      <main className="feedMain">
         <div className="feeds">
           <article>
             <div id="articleTop">
@@ -45,7 +51,7 @@ function Main() {
                   src="images/wecode_logo_1590553949.webp"
                   alt="프로필"
                 />
-                <div>
+                <div className="userLine">
                   <p className="subject">wecode_bootcamp</p>
                   <p className="additional">Wecode - 위코드</p>
                 </div>
@@ -72,15 +78,15 @@ function Main() {
                 <p id="likeBoxText">aineworld님 외 10명이 좋아합니다</p>
               </div>
               <div id="content">
-                <span className="id">wecode_bootcamp</span>
+                <span className="userName">wecode_bootcamp </span>
                 <span>과일처럼 상큼한 여러분~</span>
                 <span id="more">더 보기</span>
               </div>
               <ul>
                 <li className="commentList">
-                  <div>
-                    <span className="id">zosuzin</span>
-                    <span> 완전 맛있겠다~~~</span>
+                  <div className="commentListLeft">
+                    <span className="userName">zosuzin</span>
+                    <span className="mainWrite"> 완전 맛있겠다~~~</span>
                   </div>
                   <div className="commentListRight">
                     <i className="fa-regular fa-heart"></i>
@@ -88,9 +94,9 @@ function Main() {
                   </div>
                 </li>
                 <li className="commentList">
-                  <div>
-                    <span className="id">bts_RM</span>
-                    <span> 상큼 YO~~</span>
+                  <div className="commentListLeft">
+                    <span className="userName">bts_RM</span>
+                    <span className="mainWrite"> 상큼 YO~~</span>
                   </div>
                   <div className="commentListRight">
                     <i className="fa-regular fa-heart"></i>
@@ -113,13 +119,13 @@ function Main() {
               src="images/wecode_logo_1590553949.webp"
               alt="프로필"
             />
-            <div>
+            <div className="userLine">
               <p className="subject">wecode_bootcamp</p>
               <p className="additional">Wecode | 위코드</p>
             </div>
           </div>
 
-          <div id="stories">
+          <div className="stories">
             <div className="storiesTop">
               <p>스토리</p>
               <p className="allSee">모두 보기</p>
@@ -130,7 +136,7 @@ function Main() {
                 src="https://plus.unsplash.com/premium_photo-1681406994502-bb673c265877?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                 alt="프로필"
               />
-              <div>
+              <div className="userLine">
                 <p className="subject">yumy</p>
                 <p className="additional">16분 전</p>
               </div>
@@ -142,7 +148,7 @@ function Main() {
                 src="https://images.unsplash.com/photo-1682685797507-d44d838b0ac7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                 alt="프로필"
               />
-              <div>
+              <div className="userLine">
                 <p className="subject">drink</p>
                 <p className="additional">3시간 전</p>
               </div>
@@ -154,13 +160,13 @@ function Main() {
                 src="https://plus.unsplash.com/premium_photo-1682088221085-a99b7aa535b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
                 alt="프로필"
               />
-              <div>
+              <div className="userLine">
                 <p className="subject">hyuk</p>
                 <p className="additional">20시간 전</p>
               </div>
             </div>
           </div>
-          <div id="stories">
+          <div className="stories">
             <div className="storiesTop">
               <p>회원님을 위한 추천</p>
               <p className="allSee">모두 보기</p>
@@ -218,17 +224,17 @@ function Main() {
 
             <footer>
               <p id="footerTop">
-                <a href="s">Instagram 정보 · </a>
-                <a href="s">지원 · </a>
-                <a href="s">홍보 · </a>
-                <a href="s">센터 · </a>
-                <a href="s">채용정보 · </a>
-                <a href="s">개인정보처리방침 · </a>
-                <a href="s">약관 · </a>
-                <a href="s">디렉터리 · </a>
-                <a href="s">프로필 · </a>
-                <a href="s">해시태그 · </a>
-                <a href="s">언어 </a>
+                <span>Instagram 정보 · </span>
+                <span>지원 · </span>
+                <span>홍보 · </span>
+                <span>센터 · </span>
+                <span>채용정보 · </span>
+                <span>개인정보처리방침 · </span>
+                <span>약관 · </span>
+                <span>디렉터리 · </span>
+                <span>프로필 · </span>
+                <span>해시태그 · </span>
+                <span>언어 </span>
               </p>
               @ 2019 INSTAGRAM
             </footer>
